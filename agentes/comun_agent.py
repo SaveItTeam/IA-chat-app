@@ -30,9 +30,7 @@ TZ = ZoneInfo("America/Sao_Paulo")
 today = datetime.now(TZ).date()
 
 
-# ==============================
-# AGENTE COMUM
-# ==============================
+
 
 system_prompt_comum = ("system",
     """
