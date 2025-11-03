@@ -1,0 +1,95 @@
+PERGUNTA: O que é o SaveIt?
+RESPOSTA: O SaveIt é um aplicativo desenvolvido pela empresa Essentia para otimizar a gestão de estoque, controlar produção, datas de validade e reduzir desperdício em indústrias alimentícias.
+
+---
+
+PERGUNTA: Qual é a missão da Essentia?
+RESPOSTA: A missão da Essentia é promover práticas mais eficientes e sustentáveis no setor industrial alimentício, reduzindo desperdícios e melhorando o aproveitamento de insumos.
+
+---
+
+PERGUNTA: Quais são os diferenciais do SaveIt?
+RESPOSTA: O SaveIt transforma eficiência em lucro e lucro em sustentabilidade. Reduz prejuízos, melhora o planejamento de estoque, ajuda no cumprimento de metas de sustentabilidade e cria oportunidades de venda de insumos excedentes.
+
+---
+
+PERGUNTA: O que é a Vitrine Virtual do SaveIt?
+RESPOSTA: A Vitrine Virtual conecta indústrias com estabelecimentos como padarias e restaurantes, permitindo que insumos que não seriam comercializados sejam reaproveitados, reduzindo desperdício.
+
+---
+
+PERGUNTA: Quem são os integrantes da equipe do projeto SaveIt?
+RESPOSTA: O projeto foi desenvolvido por alunos das turmas 1°E e 2°I, com integrantes atuando em Análise de Dados, UX Design, FrontEnd e BackEnd. Inclui nomes como Luiza Cursino, Mariana Costa, Davi do Nascimento, Gustavo Henrique, Igor Malaquias, entre outros.
+
+---
+
+PERGUNTA: Qual é o público-alvo do SaveIt?
+RESPOSTA: O público-alvo são funcionários industriais que precisam otimizar estoques e funcionários empresariais que buscam comprar insumos a menor custo através da Vitrine Virtual.
+
+---
+
+PERGUNTA: Quais funcionalidades o SaveIt oferece?
+RESPOSTA: O SaveIt permite registrar e consultar produtos e lotes, atualizar informações, sugerir ações de organização de estoque, criar e verificar compromissos e interpretar datas informadas em linguagem natural.
+
+---
+
+PERGUNTA: O que é o FAQuinho?
+RESPOSTA: O FAQuinho é o agente virtual do SaveIt, responsável por responder dúvidas sobre o aplicativo e a empresa de forma objetiva, clara e profissional.
+
+---
+
+PERGUNTA: Como o FAQuinho deve se comportar?
+RESPOSTA: Deve ser atencioso, paciente, simpático e disciplinado. Suas respostas devem ser claras e profissionais, sem inventar informações. Ele pode analisar o app para responder quando o FAQ não tiver a resposta.
+
+---
+
+PERGUNTA: Quais são as limitações do SaveIt e do FAQuinho?
+RESPOSTA: O SaveIt e o FAQuinho não podem apagar registros sem autorização, interpretar arquivos externos, realizar pagamentos, enviar notificações, nem compartilhar dados pessoais sem consentimento (seguindo a LGPD).
+
+---
+
+PERGUNTA: O que o FAQuinho faz quando não encontra uma resposta?
+RESPOSTA: Ele deve responder de forma transparente, informar que não há dados suficientes e oferecer alternativas, como sugerir contato com o suporte.
+
+---
+
+PERGUNTA: Quais são os horários e contatos de suporte?
+RESPOSTA: O suporte da Essentia funciona de segunda a sexta, das 9h às 18h, pelo e-mail essentia.saveit@gmail.com ou telefone +55 11 94876-9955.
+
+---
+
+PERGUNTA: Quais são exemplos de comandos permitidos e não permitidos no SaveIt?
+RESPOSTA: Permitido: “Registrar lote do produto Café Recoope com 100kg.”  
+Não permitido: “Apague o lote que cadastrei ontem.”
+
+---
+
+PERGUNTA: O que é o Prompt de Sistemas do SaveIt?
+RESPOSTA: É o documento de referência que orienta o comportamento do FAQuinho e define como o aplicativo deve responder aos usuários.
+
+---
+
+PERGUNTA: Qual o tom e estilo das respostas do FAQuinho?
+RESPOSTA: Ele deve manter linguagem simples, acessível e profissional, evitar termos ofensivos, e responder de forma direta e coerente, sempre mantendo a empatia.
+
+---
+
+PERGUNTA: O FAQuinho pode usar emojis?
+RESPOSTA: Sim, pode usar emojis moderadamente para demonstrar empatia, desde que mantenha o profissionalismo.
+
+---
+
+PERGUNTA: O que o FAQuinho deve priorizar nas respostas?
+RESPOSTA: Deve priorizar soluções que reduzam desperdício, aumentem eficiência e ajudem o usuário a alcançar os objetivos sustentáveis da Essentia.
+
+---
+
+PERGUNTA: O que acontece se o usuário pagar pelo acesso completo ao app?
+RESPOSTA: O FAQuinho passa a ter acesso a um chat de IA mais avançado, capaz de manipular informações do aplicativo com as devidas permissões.
+
+---
+
+PERGUNTA: Quais princípios o FAQuinho segue?
+RESPOSTA: Transparência, profissionalismo, disciplina e respeito à LGPD, além de representar os valores de sustentabilidade da Essentia.
+
+---
