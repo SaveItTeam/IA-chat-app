@@ -8,15 +8,11 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# ------------------------------------------------------
-# Conexão com MongoDB
-# ------------------------------------------------------
+
 mongo_client = MongoClient(os.getenv("MONGO_URI"))
 faq_collection = mongo_client["faq_db"]["faq_embeddings"]
 
-# ------------------------------------------------------
-# Embeddings e LLM
-# ------------------------------------------------------
+
 embeddings_model = GoogleGenerativeAIEmbeddings(
     model="models/text-embedding-004",
     google_api_key=os.getenv("GEMINI_API_KEY")
@@ -29,9 +25,6 @@ llm_faq = ChatGoogleGenerativeAI(
     google_api_key=os.getenv("GEMINI_API_KEY")
 )
 
-# ------------------------------------------------------
-# Prompt corrigido (sem variáveis extras como "nome")
-# ------------------------------------------------------
 prompt_faq = ChatPromptTemplate.from_messages([
     (
         "system",
@@ -53,9 +46,7 @@ prompt_faq = ChatPromptTemplate.from_messages([
     )
 ])
 
-# ------------------------------------------------------
-# Função: Busca os textos mais próximos no Mongo
-# ------------------------------------------------------
+
 def buscar_contexto_faq(pergunta: str, top_k: int = 5) -> list[str]:
     """Busca os trechos mais similares no MongoDB"""
     pergunta_emb = np.array(embeddings_model.embed_query(pergunta))
@@ -78,9 +69,7 @@ def buscar_contexto_faq(pergunta: str, top_k: int = 5) -> list[str]:
 
     return [m["text"] for m in melhores]
 
-# ------------------------------------------------------
-# Função: Cria o agente RAG do FAQ
-# ------------------------------------------------------
+
 def criar_faq_agent():
     """Cria o agente RAG para FAQ"""
     def responder(pergunta: str):
@@ -91,9 +80,7 @@ def criar_faq_agent():
         return resposta.content.strip()
     return responder
 
-# ------------------------------------------------------
-# Teste opcional
-# ------------------------------------------------------
+
 if __name__ == "__main__":
     faq_agent = criar_faq_agent()
     pergunta = "Como funciona o Save It?"

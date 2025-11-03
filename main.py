@@ -33,9 +33,7 @@ load_dotenv()
 TZ = ZoneInfo("America/Sao_Paulo")
 today = datetime.now(TZ).date()
 from agentes.comun_agent import comum_chain
-# ==============================
-# 🧠 MODELOS LLM
-# ==============================
+
 llm = ChatGoogleGenerativeAI(
     model="gemini-2.5-flash",
     temperature=0.7,
@@ -50,9 +48,7 @@ llm_fast = ChatGoogleGenerativeAI(
     google_api_key=os.getenv("GEMINI_API_KEY")
 )
 
-# ==============================
-# 🧭 ROTEADOR
-# ==============================
+
 system_prompt_roteador = ("system", """
 Você é o ROteador .
 
@@ -102,12 +98,7 @@ prompt_roteador = ChatPromptTemplate.from_messages([
 
 
 
-# 📊 AGENTE ANALÍTICO (RESTAURO DO PROMPT ORIGINAL)
-# =
 
-# ==============================
-# ⚙️ CHAINS
-# ==============================
 
 router_chain = RunnableWithMessageHistory(
     prompt_roteador | llm_fast | StrOutputParser(),
@@ -116,9 +107,6 @@ router_chain = RunnableWithMessageHistory(
     history_messages_key="chat_history",
 )
 
-# ==============================
-# 🤖 EXECUÇÃO PRINCIPAL
-# ==============================
 def executar_fluxo_estoque(user_input, empresa_id, funcionario_id, session_id):
     config = build_config(empresa_id, funcionario_id, session_id)
     salvar_mensagem(empresa_id, funcionario_id, session_id, "user", user_input)
@@ -176,7 +164,6 @@ class IniciarChatRequest(BaseModel):
 def root():
     return {"status": "ok", "message": "SaveIt AI API is running"}
 
-# 🔹 Iniciar novo chat
 @app.post("/iniciar_chat")
 def iniciar_chat(request: IniciarChatRequest):
     try:
@@ -197,7 +184,6 @@ def iniciar_chat(request: IniciarChatRequest):
             status_code=500
         )
 
-# 🔹 Executar fluxo (POST com JSON)
 @app.post("/executar_fluxo")
 def executar_fluxo(request: ChatRequest):
     try:
@@ -225,10 +211,6 @@ def executar_fluxo(request: ChatRequest):
             status_code=500
         )
 
-# 🔹 Obter histórico da sessão
-# ==========================================
-# 🔹 Histórico por funcionário + sessão
-# ==========================================
 from fastapi import Body
 
 @app.post("/historico_sessao")
@@ -268,9 +250,6 @@ def obter_historico_sessao(
         )
 
 
-# ==========================================
-# 🔹 Histórico geral do funcionário
-# ==========================================
 @app.post("/historico_funcionario")
 def obter_historico_funcionario(funcionario_id: int = Body(...)):
     """
